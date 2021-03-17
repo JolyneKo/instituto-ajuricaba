@@ -6,8 +6,7 @@ https://institutoajuricaba.com
 
 Website simples criado usando HTML, CSS, Sass, Javascript, Font Awesome e Express.js
 
-**Versão Desktop**
+**Versão Desktop e mobile**
 <img src="desktop.png" alt="Versão desktop">
 
 <img src="mobile.png" alt="Versão desktop">
-**Versão Mobile**
