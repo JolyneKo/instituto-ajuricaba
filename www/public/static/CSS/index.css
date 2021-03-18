@@ -245,6 +245,8 @@ body {
   display: flex;
   align-items: center;
   position: relative;
+  min-height: 1068px;
+  min-width: 1663px;
 }
 .main__home__campanhas {
   background-color: white;
@@ -279,7 +281,6 @@ body {
 }
 .main__home__texto {
   z-index: 1;
-  background-color: #ff7213;
   height: 100%;
   width: 50%;
   float: left;

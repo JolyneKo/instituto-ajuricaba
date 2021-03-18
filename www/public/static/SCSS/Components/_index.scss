@@ -22,6 +22,8 @@ body {
   display: flex;
   align-items: center;
   position: relative;
+  min-height: 1068px;
+  min-width: 1663px;
 
   &__campanhas {
     background-color: white;
@@ -60,7 +62,6 @@ body {
 
   &__texto {
     z-index: 1;
-    background-color: $primary-color;
     height: 100%;
     width: 50%;
     float: left;
