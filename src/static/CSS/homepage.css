@@ -362,14 +362,8 @@ body {
 .main__home__campanhas__filter__imagem {
   width: 100%;
   height: 100%;
-<<<<<<< HEAD:www/public/static/CSS/index.css
-  background: white url("/Images/background1.jpeg") no-repeat;
-  background-size: cover;
-  background-position: center;
-=======
   background: white url("/Imagens/background1.jpeg") no-repeat;
   background-position: -240px bottom;
->>>>>>> testes:src/static/CSS/homepage.css
 }
 .main__home__texto {
   z-index: 1;
@@ -464,13 +458,13 @@ body {
     width: 100vw;
   }
   .main__home__texto__header {
-    font-size: 5rem;
+    font-size: 4rem;
     max-width: 100%;
   }
   .main__home__texto__description {
     font-size: 2rem;
     max-width: 100%;
-    line-height: 1.5;
+    line-height: 1.7;
   }
   .main__home__campanhas {
     display: none;
@@ -489,12 +483,12 @@ body {
   }
   .main__home__texto__header {
     width: 100%;
-    font-size: 5rem;
+    font-size: 4rem;
     max-width: 100%;
   }
   .main__home__texto__description {
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.8rem;
     max-width: 100%;
     line-height: 1.7;
   }
