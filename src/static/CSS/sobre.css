@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap");
@@ -155,6 +156,7 @@
 @media (max-width: 1252px) and (min-width: 488px) {
   .header {
     justify-content: center;
+    box-shadow: none;
   }
   .header__nav {
     display: none;
@@ -174,6 +176,9 @@
   }
 }
 @media (max-width: 488px) {
+  .header {
+    box-shadow: none;
+  }
   .header__nav {
     display: none;
     visibility: none;
@@ -322,147 +327,290 @@ body {
   overflow-x: hidden;
 }
 
-.main {
-  width: 100vw;
-  height: auto;
-}
+@media (max-width: 900px) {
+  .main {
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+  }
 
-.main__banner {
-  width: 100%;
-  height: 300px;
-  background: #ff7213;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.main__banner__header {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 3.5rem;
-  color: white;
-}
+  .main__banner {
+    display: none;
+    visibility: hidden;
+  }
 
-.content__parte-1 {
-  display: flex;
-  margin: 0 20%;
+  .content__parte-1 {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  .content__parte-1 .imagem {
+    width: 100%;
+    height: 250px;
+    background: black url("/Imagens/imagem1.jpg") no-repeat center;
+    background-size: cover;
+  }
+  .content__parte-1__artigo {
+    padding: 30px;
+  }
+  .content__parte-1__artigo__header {
+    font-family: "Nunito Sans", sans-serif;
+    color: #555c66;
+    font-size: 2.3rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .content__parte-1__artigo__header::before {
+    content: "Sobre nós";
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1.3rem;
+    color: #ff7213;
+    font-weight: normal;
+  }
+  .content__parte-1__artigo__text {
+    font-family: "Aktiv Grotesk", sans-serif;
+    color: #ff7213;
+    font-size: 1.12rem;
+    line-height: 2;
+    margin: 20px 0;
+    margin-top: 10px;
+    color: black;
+  }
+
+  .content__parte-2 {
+    background-color: black;
+    padding: 60px 0;
+  }
+  .content__parte-2__header {
+    font-family: "Nunito Sans", sans-serif;
+    color: #ff7213;
+    text-align: center;
+    font-size: 2.3rem;
+  }
+  .content__parte-2__text {
+    font-family: "Aktiv Grotesk", sans-serif;
+    font-size: 1.12rem;
+    color: white;
+    margin: 10px 30px;
+    margin-bottom: 50px;
+    line-height: 2;
+  }
+  .content__parte-2 .containers__container {
+    margin: 20px;
+    background-color: white;
+  }
+  .content__parte-2 .containers__container__header {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 20px 0;
+    color: black;
+  }
+  .content__parte-2 .containers__container__text {
+    font-family: "Aktiv Grotesk", sans-serif;
+    font-size: 1.12rem;
+    line-height: 2;
+    margin: 0 30px;
+    margin-bottom: 30px;
+    color: black;
+  }
+  .content__parte-2 .containers__container__local {
+    background-color: #ff7213;
+    font-family: "Aktiv Grotesk", sans-serif;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+    padding: 30px 0;
+  }
+  .content__parte-2 .containers__container img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+  }
+
+  .content__parte-3 {
+    background-color: #ff7213;
+    padding-top: 50px;
+  }
+  .content__parte-3__header {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 2.3rem;
+    text-align: center;
+    margin: 20px 30px;
+    color: black;
+  }
+  .content__parte-3__text {
+    font-family: "Aktiv Grotesk", sans-serif;
+    font-size: 1.12rem;
+    line-height: 2;
+    margin-bottom: 30px;
+    color: white;
+    margin: 0 30px;
+  }
+  .content__parte-3__numbers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    background-color: white;
+    width: 100%;
+    padding: 50px 30px;
+  }
+  .content__parte-3__numbers .number {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    color: black;
+  }
+  .content__parte-3__numbers .text {
+    font-family: "Aktiv Grotesk", sans-serif;
+    font-size: 1.3rem;
+    color: black;
+  }
 }
-.content__parte-1 .imagem {
-  width: 500px;
-  height: 500px;
-  background: black url("/Imagens/imagem1.jpg") no-repeat center;
-  background-size: cover;
-}
-.content__parte-1__artigo {
-  margin: 80px 70px;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.content__parte-1__artigo__header {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 3rem;
-  margin-bottom: 10px;
-  color: black;
-}
-.content__parte-1__artigo__text {
-  font-family: "Aktiv Grotesk", sans-serif;
-  font-size: 1.3rem;
-  line-height: 1.7;
-  color: black;
-}
-.content__parte-2 {
-  background-color: black;
-  width: 100%;
-  padding: 100px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.content__parte-2__header {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 3rem;
-  color: white;
-  margin-bottom: 10px;
-}
-.content__parte-2__text {
-  font-family: "Aktiv Grotesk", sans-serif;
-  color: #ff7213;
-  font-size: 1.3rem;
-  line-height: 1.7;
-  max-width: 40%;
-  text-align: center;
-}
-.content .containers {
-  display: flex;
-}
-.content .containers__container {
-  background-color: white;
-  width: 350px;
-  margin: 48px 15px;
-}
-.content .containers__container__header {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 2rem;
-  text-align: center;
-  margin: 20px 0;
-  color: black;
-}
-.content .containers__container__text {
-  font-family: "Aktiv Grotesk", sans-serif;
-  font-size: 1.3rem;
-  line-height: 1.7;
-  margin: 0 30px;
-  margin-bottom: 30px;
-  color: black;
-}
-.content .containers__container__local {
-  background-color: #ff7213;
-  font-family: "Aktiv Grotesk", sans-serif;
-  text-align: center;
-  font-size: 1.2rem;
-  color: white;
-  padding: 30px 0;
-}
-.content .containers__container img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-}
-.content__parte-3 {
-  background-color: #ff7213;
-  padding: 50px 20%;
-}
-.content__parte-3__header {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 3rem;
-  text-align: center;
-  margin: 20px 0;
-  color: white;
-}
-.content__parte-3__text {
-  font-family: "Aktiv Grotesk", sans-serif;
-  font-size: 1.3rem;
-  line-height: 1.7;
-  margin: 0 30px;
-  margin-bottom: 30px;
-  color: black;
-}
-.content__parte-3__numbers {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 30px 0;
-}
-.content__parte-3__numbers .number {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 4rem;
-  font-weight: bold;
-  color: black;
-}
-.content__parte-3__numbers .text {
-  font-family: "Aktiv Grotesk", sans-serif;
-  font-size: 1.3rem;
-  color: black;
+@media (min-width: 900px) {
+  .main {
+    width: 100vw;
+    height: auto;
+  }
+
+  .main__banner {
+    width: 100%;
+    height: 300px;
+    background: #ff7213;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main__banner__header {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 3.5rem;
+    color: white;
+  }
+
+  .content__parte-1 {
+    display: flex;
+    margin: 0 20%;
+  }
+  .content__parte-1 .imagem {
+    width: 500px;
+    height: 500px;
+    background: black url("/Imagens/imagem1.jpg") no-repeat center;
+    background-size: cover;
+  }
+  .content__parte-1__artigo {
+    margin: 80px 70px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .content__parte-1__artigo__header {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: black;
+  }
+  .content__parte-1__artigo__text {
+    font-family: "Aktiv Grotesk", sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: black;
+  }
+  .content__parte-2 {
+    background-color: black;
+    width: 100%;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .content__parte-2__header {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 10px;
+  }
+  .content__parte-2__text {
+    font-family: "Aktiv Grotesk", sans-serif;
+    color: #ff7213;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    max-width: 40%;
+    text-align: center;
+  }
+  .content .containers {
+    display: flex;
+  }
+  .content .containers__container {
+    background-color: white;
+    width: 350px;
+    margin: 48px 15px;
+  }
+  .content .containers__container__header {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 20px 0;
+    color: black;
+  }
+  .content .containers__container__text {
+    font-family: "Aktiv Grotesk", sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    margin: 0 30px;
+    margin-bottom: 30px;
+    color: black;
+  }
+  .content .containers__container__local {
+    background-color: #ff7213;
+    font-family: "Aktiv Grotesk", sans-serif;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+    padding: 30px 0;
+  }
+  .content .containers__container img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+  }
+  .content__parte-3 {
+    background-color: #ff7213;
+    padding: 50px 20%;
+  }
+  .content__parte-3__header {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin: 20px 0;
+    color: white;
+  }
+  .content__parte-3__text {
+    font-family: "Aktiv Grotesk", sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    margin: 0 30px;
+    margin-bottom: 30px;
+    color: black;
+  }
+  .content__parte-3__numbers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+  }
+  .content__parte-3__numbers .number {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    color: black;
+  }
+  .content__parte-3__numbers .text {
+    font-family: "Aktiv Grotesk", sans-serif;
+    font-size: 1.3rem;
+    color: black;
+  }
 }
 
 /*# sourceMappingURL=sobre.css.map */

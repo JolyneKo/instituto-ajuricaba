@@ -184,6 +184,7 @@
   // Mobile
   @include header__mobile {
     justify-content: center;
+    box-shadow: none;
 
     &__nav {
       display: none;
@@ -207,6 +208,8 @@
 
   // Mobile (mini)
   @include header__mobile--mini {
+    box-shadow: none;
+
     &__nav {
       display: none;
       visibility: none;

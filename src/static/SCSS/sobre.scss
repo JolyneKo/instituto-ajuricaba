@@ -3,6 +3,7 @@
 @use 'Components/menu';
 @use 'Components/footer';
 
+// Ajustes no body
 html,
 body {
   min-height: 100%;
@@ -13,154 +14,153 @@ body {
   overflow-x: hidden;
 }
 
-.main {
-  width: 100vw;
-  height: auto;
-}
-
-.main__banner {
-  width: 100%;
-  height: 300px;
-  background: $primary-color;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &__header {
-    font-family: $main-header;
-    font-size: 3.5rem;
-    color: white;
+// Versão Mobile
+@media (max-width: 900px) {
+  .main {
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
   }
-}
 
-.content {
-  &__parte-1 {
+  // Texto sobre nós
+  .main__banner {
+    display: none;
+    visibility: hidden;
+  }
+
+  // Segunda parte - Nossa história
+  .content__parte-1 {
+    background-color: white;
     display: flex;
-    margin: 0 20%;
+    flex-direction: column;
 
     .imagem {
-      width: 500px;
-      height: 500px;
+      width: 100%;
+      height: 250px;
       background: black url("/Imagens/imagem1.jpg") no-repeat center;
       background-size: cover;
     }
 
     &__artigo {
-      margin: 80px 70px;
-      max-width: 500px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      padding: 30px;
 
       &__header {
         font-family: $main-header;
-        font-size: 3rem;
-        margin-bottom: 10px;
-        color: black;
+        color: #555c66;
+        font-size: 2.3rem;
+        display: flex;
+        flex-direction: column;
+
+        &::before {
+          content: "Sobre nós";
+          font-family: $main-header;
+          font-size: 1.3rem;
+          color: $primary-color;
+          font-weight: normal;
+        }
       }
 
       &__text {
         font-family: $main-font;
-        font-size: 1.3rem;
-        line-height: 1.7;
-        color: black;
-      }
-    }
-  }
-
-  &__parte-2 {
-    background-color: black;
-    width: 100%;
-    padding: 100px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    &__header {
-      font-family: $main-header;
-      font-size: 3rem;
-      color: white;
-      margin-bottom: 10px;
-    }
-
-    &__text {
-      font-family: $main-font;
-      color: $primary-color;
-      font-size: 1.3rem;
-      line-height: 1.7;
-      max-width: 40%;
-      text-align: center;
-    }
-  }
-
-  .containers {
-    display: flex;
-
-    &__container {
-      background-color: white;
-      width: 350px;
-      margin: 48px 15px;
-
-      &__header {
-        font-family: $main-header;
-        font-size: 2rem;
-        text-align: center;
+        color: $primary-color;
+        font-size: 1.12rem;
+        line-height: 2;
         margin: 20px 0;
+        margin-top: 10px;
         color: black;
-      }
-
-      &__text {
-        font-family: $main-font;
-        font-size: 1.3rem;
-        line-height: 1.7;
-        margin: 0 30px;
-        margin-bottom: 30px;
-        color: black;
-      }
-
-      &__local {
-        background-color: $primary-color;
-        font-family: $main-font;
-        text-align: center;
-        font-size: 1.2rem;
-        color: white;
-        padding: 30px 0;
-      }
-
-      img {
-        width: 100%;
-        height: 230px;
-        object-fit: cover;
       }
     }
   }
 
-  &__parte-3 {
-    background-color: $primary-color;
-    padding: 50px 20%;
+  .content__parte-2 {
+    background-color: black;
+    padding: 60px 0;
 
     &__header {
       font-family: $main-header;
-      font-size: 3rem;
+      color: $primary-color;
       text-align: center;
-      margin: 20px 0;
-      color: white;
+      font-size: 2.3rem;
     }
 
     &__text {
       font-family: $main-font;
-      font-size: 1.3rem;
-      line-height: 1.7;
-      margin: 0 30px;
-      margin-bottom: 30px;
+      font-size: 1.12rem;
+      color: white;
+      margin: 10px 30px;
+      margin-bottom: 50px;
+      line-height: 2;
+    }
+
+    .containers {
+      &__container {
+        margin: 20px;
+        background-color: white;
+
+        &__header {
+          font-family: $main-header;
+          font-size: 2rem;
+          text-align: center;
+          margin: 20px 0;
+          color: black;
+        }
+
+        &__text {
+          font-family: $main-font;
+          font-size: 1.12rem;
+          line-height: 2;
+          margin: 0 30px;
+          margin-bottom: 30px;
+          color: black;
+        }
+
+        &__local {
+          background-color: $primary-color;
+          font-family: $main-font;
+          text-align: center;
+          font-size: 1.2rem;
+          color: white;
+          padding: 30px 0;
+        }
+
+        img {
+          width: 100%;
+          height: 230px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .content__parte-3 {
+    background-color: $primary-color;
+    padding-top: 50px;
+
+    &__header {
+      font-family: $main-header;
+      font-size: 2.3rem;
+      text-align: center;
+      margin: 20px 30px;
       color: black;
+    }
+
+    &__text {
+      font-family: $main-font;
+      font-size: 1.12rem;
+      line-height: 2;
+      margin-bottom: 30px;
+      color: white;
+      margin: 0 30px;
     }
 
     &__numbers {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 30px 0;
+      margin-top: 50px;
+      background-color: white;
+      width: 100%;
+      padding: 50px 30px;
 
       .number {
         font-family: $main-header;
@@ -173,6 +173,174 @@ body {
         font-family: $main-font;
         font-size: 1.3rem;
         color: black;
+      }
+    }
+  }
+}
+
+// Versão Desktop
+@media (min-width: 900px) {
+  .main {
+    width: 100vw;
+    height: auto;
+  }
+
+  .main__banner {
+    width: 100%;
+    height: 300px;
+    background: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__header {
+      font-family: $main-header;
+      font-size: 3.5rem;
+      color: white;
+    }
+  }
+
+  .content {
+    &__parte-1 {
+      display: flex;
+      margin: 0 20%;
+
+      .imagem {
+        width: 500px;
+        height: 500px;
+        background: black url("/Imagens/imagem1.jpg") no-repeat center;
+        background-size: cover;
+      }
+
+      &__artigo {
+        margin: 80px 70px;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__header {
+          font-family: $main-header;
+          font-size: 3rem;
+          margin-bottom: 10px;
+          color: black;
+        }
+
+        &__text {
+          font-family: $main-font;
+          font-size: 1.3rem;
+          line-height: 1.7;
+          color: black;
+        }
+      }
+    }
+
+    &__parte-2 {
+      background-color: black;
+      width: 100%;
+      padding: 100px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__header {
+        font-family: $main-header;
+        font-size: 3rem;
+        color: white;
+        margin-bottom: 10px;
+      }
+
+      &__text {
+        font-family: $main-font;
+        color: $primary-color;
+        font-size: 1.3rem;
+        line-height: 1.7;
+        max-width: 40%;
+        text-align: center;
+      }
+    }
+
+    .containers {
+      display: flex;
+
+      &__container {
+        background-color: white;
+        width: 350px;
+        margin: 48px 15px;
+
+        &__header {
+          font-family: $main-header;
+          font-size: 2rem;
+          text-align: center;
+          margin: 20px 0;
+          color: black;
+        }
+
+        &__text {
+          font-family: $main-font;
+          font-size: 1.3rem;
+          line-height: 1.7;
+          margin: 0 30px;
+          margin-bottom: 30px;
+          color: black;
+        }
+
+        &__local {
+          background-color: $primary-color;
+          font-family: $main-font;
+          text-align: center;
+          font-size: 1.2rem;
+          color: white;
+          padding: 30px 0;
+        }
+
+        img {
+          width: 100%;
+          height: 230px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &__parte-3 {
+      background-color: $primary-color;
+      padding: 50px 20%;
+
+      &__header {
+        font-family: $main-header;
+        font-size: 3rem;
+        text-align: center;
+        margin: 20px 0;
+        color: white;
+      }
+
+      &__text {
+        font-family: $main-font;
+        font-size: 1.3rem;
+        line-height: 1.7;
+        margin: 0 30px;
+        margin-bottom: 30px;
+        color: black;
+      }
+
+      &__numbers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+
+        .number {
+          font-family: $main-header;
+          font-size: 4rem;
+          font-weight: bold;
+          color: black;
+        }
+
+        .text {
+          font-family: $main-font;
+          font-size: 1.3rem;
+          color: black;
+        }
       }
     }
   }
