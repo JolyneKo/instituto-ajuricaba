@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'CSS/diretoria.css' %}" />
+
+    <!-- Scripts externos -->
+    <script
+      src="https://kit.fontawesome.com/973f56b433.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JS -->
+    <script defer src="{% static 'JS/menu.js' %}"></script>
+
+    <!-- Icons -->
+    <link
+      rel="shortcut icon"
+      href="/Imagens/icons/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="shortcut icon"
+      href="/Imagens/icons/favicon-192x192.png"
+      sizes="192x192"
+    />
+    <link rel="apple-touch-icon" href="/Imagens/icons/favicon-180x180.png" />
+
+    <!-- Título -->
+    <title>Diretoria - Instituto Ajuricaba</title>
+  </head>
+  <body>
+    {% include "header.html" %} {% include "menu-mobile.html" %}
+    <main class="main">
+      <div class="content">
+        <div class="content__header">
+          <h1>Diretoria</h1>
+        </div>
+        <div class="content__containers">
+          <section class="container">
+            <img
+              src="/Imagens/vivianne.jpg"
+              alt="Vivianne - Presidente"
+              class="container__image"
+            />
+            <div class="container__name">Vivianne Santos</div>
+            <div class="container__role">Presidente</div>
+          </section>
+          <section class="container">
+            <img
+              src="/Imagens/paulo.jpg"
+              alt="Paulo Alberto - Vice-presidente"
+              class="container__image"
+            />
+            <div class="container__name">Paulo Alberto Carneiro</div>
+            <div class="container__role">Vice-Presidente</div>
+          </section>
+          <section class="container">
+            <img
+              src="/Imagens/jackson.jpg"
+              alt="Jackson Ribeiro - 1° Secretário"
+              class="container__image"
+            />
+            <div class="container__name">Jackson Ribeiro</div>
+            <div class="container__role">1° Secretário</div>
+          </section>
+          <section class="container">
+            <img
+              src="/Imagens/marli.jpg"
+              alt="Marli Yoshiko - 2ª Secretária"
+              class="container__image"
+            />
+            <div class="container__name">Marli Yoshiko</div>
+            <div class="container__role">2ª Secretária</div>
+          </section>
+          <section class="container">
+            <img
+              src="/Imagens/mary.jpg"
+              alt="Maryane Maia - 1ª Tesoureira"
+              class="container__image"
+            />
+            <div class="container__name">Maryane Maia</div>
+            <div class="container__role">1ª Tesoureira</div>
+          </section>
+          <section class="container">
+            <img
+              src="/Imagens/dimi.jpeg"
+              alt="Dimi Queiroz - 2ª Tesoureira"
+              class="container__image"
+            />
+            <div class="container__name">Dimi Queiroz</div>
+            <div class="container__role">2ª Tesoureira</div>
+          </section>
+        </div>
+      </div>
+    </main>
+    {% include "footer.html" %}
+  </body>
+</html>

@@ -16,7 +16,7 @@ SECRET_KEY = "^hu0f5(u6q)j0rj2%7@#0!3d$$l2ig@4$47eo#t!)8rt5)*+lb"
 DEBUG = True
 
 # Hosts permitidos
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Meus apps
 INSTALLED_APPS = [
@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.homepage',
     'apps.sobre',
+    'apps.diretoria',
+    'apps.expresidentes',
 ]
 
 MIDDLEWARE = [
