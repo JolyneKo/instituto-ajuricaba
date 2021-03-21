@@ -1,0 +1,134 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Metas -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'CSS/sobre.css' %}" />
+
+    <!-- Scripts Externos -->
+    <script
+      src="https://kit.fontawesome.com/973f56b433.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Icons -->
+    <link
+      rel="shortcut icon"
+      href="/Imagens/icons/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="shortcut icon"
+      href="/Imagens/icons/favicon-192x192.png"
+      sizes="192x192"
+    />
+    <link rel="apple-touch-icon" href="/Imagens/icons/favicon-180x180.png" />
+
+    <!-- JS -->
+    <script defer src="{% static 'JS/menu.js' %}"></script>
+
+    <!-- Título -->
+    <title>Sobre nós - Instituto Ajuricaba</title>
+  </head>
+  <body>
+    {% include "header.html" %} {% include "menu-mobile.html" %}
+    <main class="main">
+      <div class="main__banner">
+        <h1 class="main__banner__header">Sobre nós</h1>
+      </div>
+      <article class="content">
+        <section class="content__parte-1 content__parte">
+          <div class="imagem"></div>
+          <div class="content__parte-1__artigo">
+            <h2 class="content__parte-1__artigo__header">Nossa história</h2>
+            <p class="content__parte-1__artigo__text">
+              Fundado por 7 jovens visionários que buscam por liberdade na nossa
+              região, o Instituto Ajuricaba foi criado no dia 11 de Outubro de
+              2014 e protagonizou diversos eventos, ações e debates a favor da
+              liberdade.
+            </p>
+          </div>
+        </section>
+        <section class="content__parte-2 content__parte">
+          <h2 class="content__parte-2__header">Nossos Prêmios</h2>
+          <p class="content__parte-2__text">
+            Durante nossa história, fomos homenageados com premiações de caráter
+            Nacional e Internacional
+          </p>
+          <div class="containers">
+            <section class="containers__container">
+              <img
+                src="/Imagens/premio1.jpg"
+                alt=""
+                class="containers__container__imagem"
+              />
+              <h2 class="containers__container__header">Group Of Year</h2>
+              <p class="containers__container__text">
+                A premiação feita pelo Students For Liberty, de Wahsington D.C.,
+                nomeou o Instituto Ajuricaba como “Group of Year” em 2016.
+              </p>
+              <div class="containers__container__local">
+                Student for Liberty, USA
+              </div>
+            </section>
+            <section class="containers__container">
+              <img
+                src="/Imagens/premio2.jpeg"
+                alt=""
+                class="containers__container__imagem"
+              />
+
+              <h2 class="containers__container__header">Student of Year</h2>
+              <p class="containers__container__text">
+                A premiação feita pelo Students For Liberty, de Wahsington D.C.,
+                nomeou o Instituto Ajuricaba como “Student of Year” em 2016.
+              </p>
+              <div class="containers__container__local">
+                Student for Liberty, USA
+              </div>
+            </section>
+            <section class="containers__container">
+              <img
+                src="/Imagens/premio3.jpg"
+                alt=""
+                class="containers__container__imagem"
+              />
+
+              <h2 class="containers__container__header">Estudante do Ano</h2>
+              <p class="containers__container__text">
+                O Ex-Presidente do Instituto Ajuricaba Artur Fonseca foi
+                premiado como “Estudante do Ano” em 2017 pela rede Students for
+                Liberty Brasil.
+              </p>
+              <div class="containers__container__local">
+                Students for Liberty, Brasil
+              </div>
+            </section>
+          </div>
+        </section>
+        <section class="content__parte-3 content__parte">
+          <h2 class="content__parte-3__header">
+            Expectativa de público alcançado
+          </h2>
+          <p class="content__parte-3__text">
+            Durante nossos eventos e ações sociais, atingimos diversas camadas
+            da sociedade, do trabalhor comum ao empresário, do estudante ao
+            doutor. O Instituto Ajuricaba quebrou recordes de presença em
+            eventos pró-liberdade!
+          </p>
+          <div class="content__parte-3__numbers">
+            <span class="number"> 300,000 </span>
+            <span class="text">Pessoas impactadas</span>
+          </div>
+        </section>
+      </article>
+    </main>
+    {% include "footer.html" %}
+  </body>
+</html>
