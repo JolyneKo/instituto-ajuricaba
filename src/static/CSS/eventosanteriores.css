@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap");
 @font-face {
   font-family: "Aktiv Grotesk";
   src: url("/static/Fonts/AktivGroteskCorp-Regular.ttf");
@@ -320,9 +321,6 @@ html,
 body {
   min-height: 100%;
   height: 100%;
-}
-
-body {
   overflow-x: hidden;
 }
 
@@ -330,199 +328,93 @@ body {
   box-shadow: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 420px) {
   .main {
-    background-color: #f3f3f3;
     width: 100vw;
-    height: auto;
-  }
-
-  .content {
-    width: 100%;
-    padding: 40px;
-    background-color: white;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  }
-  .content__header {
-    font-family: "Nunito Sans", sans-serif;
-    text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-  }
-  .content__containers {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 300px);
-    column-gap: 50px;
-    row-gap: 0;
-    justify-content: center;
+    display: flex;
     align-items: center;
-    align-content: flex-start;
+    background-color: #f8f9fa;
   }
-  .content__containers .container {
-    border-radius: 18px;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    text-align: center;
+  .main__eventos {
     width: 100%;
-    height: auto;
-    margin: 30px 0;
-    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
   }
-  .content__containers .container__image {
+  .main__eventos__container {
     width: 100%;
-    height: 210px;
+    margin: 20px 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  .main__eventos__container__image {
+    width: 100%;
+    height: 250px;
     object-fit: cover;
-    object-position: top;
-    border-top-left-radius: 18px;
-    border-top-right-radius: 18px;
   }
-  .content__containers .container__name {
-    padding: 20px 30px;
-    font-size: 1.3rem;
-    font-family: "Nunito Sans", sans-serif;
+  .main__eventos__container__title {
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
+    margin-top: 30px;
+    padding: 0 20px;
   }
-  .content__containers .container__role {
-    padding: 20px 30px;
-    background-color: #ff7213;
-    border-bottom-left-radius: 18px;
-    border-bottom-right-radius: 18px;
-    color: white;
+  .main__eventos__container__date {
+    font-family: "Raleway", sans-serif;
+    color: #ff7213;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0 20px;
+  }
+  .main__eventos__container__text {
+    margin: 20px 0;
+    margin-bottom: 30px;
     font-family: "Aktiv Grotesk", sans-serif;
-  }
-  .content__containers .container:hover {
-    transform: scale(1.2);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    font-size: 1.2rem;
+    color: #232F55;
+    line-height: 1.7;
+    padding: 0 20px;
   }
 }
-@media (min-width: 900px) and (max-width: 1600px) {
+@media (min-width: 420px) {
   .main {
-    background-color: #f3f3f3;
     width: 100vw;
-    height: auto;
-  }
-
-  .content {
-    width: 100%;
-    padding: 40px 10%;
-    background-color: white;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  }
-  .content__header {
-    font-family: "Nunito Sans", sans-serif;
-    text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-  }
-  .content__containers {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 300px);
-    column-gap: 50px;
-    row-gap: 0;
-    justify-content: center;
+    padding: 50px 13%;
+    display: flex;
     align-items: center;
-    align-content: flex-start;
+    background-color: #f8f9fa;
   }
-  .content__containers .container {
-    border-radius: 18px;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    text-align: center;
-    width: 300px;
-    height: auto;
-    margin: 30px 0;
-    transition: 0.3s;
-  }
-  .content__containers .container__image {
+  .main__eventos {
     width: 100%;
-    height: 210px;
-    object-fit: cover;
-    object-position: top;
-    border-top-left-radius: 18px;
-    border-top-right-radius: 18px;
-  }
-  .content__containers .container__name {
-    padding: 20px 30px;
-    font-size: 1.3rem;
-    font-family: "Nunito Sans", sans-serif;
-  }
-  .content__containers .container__role {
-    padding: 20px 30px;
-    background-color: #ff7213;
-    border-bottom-left-radius: 18px;
-    border-bottom-right-radius: 18px;
-    color: white;
-    font-family: "Aktiv Grotesk", sans-serif;
-  }
-  .content__containers .container:hover {
-    transform: scale(1.2);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
-  }
-}
-@media (min-width: 1600px) {
-  .main {
-    background-color: #f3f3f3;
-    width: 100vw;
-    height: auto;
-    padding: 50px 0;
-  }
-
-  .content {
-    margin: 0 15%;
-    padding: 100px;
-    background-color: white;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    border-radius: 20px;
-  }
-  .content__header {
-    font-family: "Nunito Sans", sans-serif;
-    text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-  }
-  .content__containers {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 300px);
-    column-gap: 50px;
-    row-gap: 0;
+    grid-template-columns: repeat(auto-fit, 420px);
     justify-content: center;
-    align-items: center;
-    align-content: flex-start;
+    gap: 20px;
+    grid-row-gap: 50px;
   }
-  .content__containers .container {
-    border-radius: 18px;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    text-align: center;
-    width: 300px;
-    height: auto;
-    margin: 30px 0;
-    transition: 0.3s;
-  }
-  .content__containers .container__image {
+  .main__eventos__container {
     width: 100%;
-    height: 210px;
+    padding: 0 30px;
+  }
+  .main__eventos__container__image {
+    width: 100%;
+    height: 250px;
     object-fit: cover;
-    object-position: top;
-    border-top-left-radius: 18px;
-    border-top-right-radius: 18px;
   }
-  .content__containers .container__name {
-    padding: 20px 30px;
-    font-size: 1.3rem;
-    font-family: "Nunito Sans", sans-serif;
+  .main__eventos__container__title {
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
+    margin-top: 30px;
   }
-  .content__containers .container__role {
-    padding: 20px 30px;
-    background-color: #ff7213;
-    border-bottom-left-radius: 18px;
-    border-bottom-right-radius: 18px;
-    color: white;
+  .main__eventos__container__date {
+    font-family: "Raleway", sans-serif;
+    color: #ff7213;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  .main__eventos__container__text {
+    margin: 30px 0;
     font-family: "Aktiv Grotesk", sans-serif;
-  }
-  .content__containers .container:hover {
-    transform: scale(1.2);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    font-size: 1.2rem;
+    color: #232F55;
   }
 }
 
-/*# sourceMappingURL=diretoria.css.map */
+/*# sourceMappingURL=eventosanteriores.css.map */

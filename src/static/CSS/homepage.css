@@ -155,6 +155,7 @@
 @media (max-width: 1252px) and (min-width: 488px) {
   .header {
     justify-content: center;
+    box-shadow: none;
   }
   .header__nav {
     display: none;
@@ -174,6 +175,9 @@
   }
 }
 @media (max-width: 488px) {
+  .header {
+    box-shadow: none;
+  }
   .header__nav {
     display: none;
     visibility: none;
@@ -211,7 +215,7 @@
 }
 .menu__links__link a {
   font-family: "Aktiv Grotesk", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: black;
   text-decoration: none;
 }
@@ -630,7 +634,7 @@ body {
   display: flex;
 }
 .main__infos__projetos__containers__container {
-  background: linear-gradient(360deg, #FF6F0E 44%, #FFAD00 100%);
+  background: linear-gradient(360deg, #ff6f0e 44%, #ffad00 100%);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 15px 5px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   width: 360px;
   margin: 0 30px;

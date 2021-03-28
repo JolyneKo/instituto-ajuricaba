@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	{% load static %}
+	<!-- Metas -->
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- CSS -->
+    <link rel="stylesheet" href="{% static 'CSS/eventosanteriores.css' %}" />
+
+    <!-- Scripts externos -->
+    <script
+      src="https://kit.fontawesome.com/973f56b433.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JS -->
+    <script defer src="{% static 'JS/menu.js' %}"></script>
+
+    <!-- Icons -->
+    <link
+      rel="shortcut icon"
+      href="/Imagens/icons/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="shortcut icon"
+      href="/Imagens/icons/favicon-192x192.png"
+      sizes="192x192"
+    />
+    <link rel="apple-touch-icon" href="/Imagens/icons/favicon-180x180.png" />
+
+    <!-- Título -->
+	<title>Eventos Anteriores - Instituto Ajuricaba</title>
+</head>
+<body>
+	{% include "header.html" %}
+	{% include "menu-mobile.html" %}
+
+	<!-- Main -->
+	<main class="main">
+		<article class="main__eventos">
+			{% for evento in eventos %}
+				<section class="main__eventos__container">
+					<img src="Imagens/{{ evento.imagem }}" alt="{{ evento.titulo }}" class="main__eventos__container__image">
+					<h2 class="main__eventos__container__title">{{ evento.titulo }}</h2>
+					<div class="main__eventos__container__date">{{ evento.data }}</div>
+					<p class="main__eventos__container__text">{{ evento.texto }}</p>
+				</section>
+			{% endfor %}
+		</article>
+	</main>
+
+	{% include "footer.html" %}
+</body>
+</html>
